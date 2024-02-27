@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedButton
@@ -85,9 +86,17 @@ fun Login() {
         )
         OutlinedButton(
             onClick = { /*TODO*/ },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth(),
+            colors = ButtonDefaults.outlinedButtonColors(
+                backgroundColor = MaterialTheme.colors.primaryVariant,
+                contentColor = MaterialTheme.colors.onPrimary
+            )
         ) {
-            Text(stringResource(R.string.submit))
+                Text(
+                    text = stringResource(R.string.submit),
+                    color = MaterialTheme.colors.onPrimary
+                )
         }
     }
 }
