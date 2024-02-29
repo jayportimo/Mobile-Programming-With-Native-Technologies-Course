@@ -26,6 +26,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
@@ -83,8 +84,8 @@ fun MainTopBar(title: String, navController: NavController) {
             DropdownMenu(
                 expanded = expanded,
                 onDismissRequest = { expanded = false }) {
-                DropdownMenuItem(text = {Text("Info")}, onClick = { navController.navigate("info") })
-                DropdownMenuItem(text = {Text("Settings")}, onClick = { navController.navigate("settings") })
+                DropdownMenuItem(text = {Text(stringResource(R.string.info))}, onClick = { navController.navigate("info") })
+                DropdownMenuItem(text = {Text(stringResource(R.string.settings))}, onClick = { navController.navigate("settings") })
             }
         }
     )
@@ -106,7 +107,7 @@ fun ScreenTopBar(title: String, navController: NavController) {
 fun MainScreen(navController: NavController) {
     Scaffold(
         topBar = { MainTopBar(title = "My app", navController) },
-        content = { Text(text = "Content for Home screen")},
+        content = { Text(text = stringResource(R.string.content_for_home_screen))},
     )
 }
 
@@ -115,7 +116,7 @@ fun MainScreen(navController: NavController) {
 fun InfoScreen(navController: NavController) {
     Scaffold(
         topBar = { ScreenTopBar(title = "Info", navController )},
-        content = { Text(text = "Content for Info screen")},
+        content = { Text(text = stringResource(R.string.content_for_info_screen))},
     )
 }
 
@@ -124,7 +125,7 @@ fun InfoScreen(navController: NavController) {
 fun SettingsScreen(navController: NavController) {
     Scaffold(
         topBar = { ScreenTopBar(title = "Settings", navController )},
-        content = { Text(text = "Content for Settings screen")},
+        content = { Text(text = stringResource(R.string.content_for_settings_screen))},
     )
 }
 

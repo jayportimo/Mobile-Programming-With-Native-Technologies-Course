@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ScaffoldNavigation</string>
+    <string name="info">Info</string>
+    <string name="settings">Settings</string>
+    <string name="content_for_home_screen">Content for Home screen</string>
+    <string name="content_for_info_screen">Content for Info screen</string>
+    <string name="content_for_settings_screen">Content for Settings screen</string>
 </resources>
