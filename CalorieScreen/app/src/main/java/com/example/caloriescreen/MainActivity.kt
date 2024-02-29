@@ -64,6 +64,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 @Composable
 fun CalorieScreen() {
     var weightInput by remember { mutableStateOf("") }
